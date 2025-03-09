@@ -1,0 +1,28 @@
+import itertools
+
+comparisons = []
+for _ in range(3):
+    comparisons.append(input())
+
+coins = "ABC"
+result = "Impossible"
+
+for permutation in itertools.permutations(coins):
+    possible = True
+    for comp in comparisons:
+        coin1 = comp[0]
+        op = comp[1]
+        coin2 = comp[2]
+
+        index1 = permutation.index(coin1)
+        index2 = permutation.index(coin2)
+
+        if (op == '>' and index1 < index2) or (op == '<' and index1 > index2):
+            possible = False
+            break
+
+    if possible:
+        result = "".join(permutation)
+        break
+
+print(result)
