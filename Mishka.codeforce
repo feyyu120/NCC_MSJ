@@ -1,0 +1,19 @@
+n=int(input())
+c1 = 0
+c2 = 0
+c3 = 0
+for i in range(n):
+	a,b=map(int,input().split())
+	if a > b:
+		c1 += 1
+	elif a < b:
+		c2 += 1
+	else:
+		c3 += 1
+if c1 > c2 and c1 > c3:
+	print("Mishka")
+elif c2 > c1 and c2 >= 1:
+	print("Chris")
+else:
+	print("Friendship is magic!^^")
+	
