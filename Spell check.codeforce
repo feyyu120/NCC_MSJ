@@ -1,0 +1,21 @@
+t = int(input())
+s = "Timur"
+lst = []
+for _ in range(t):
+    n = int(input())
+    s1 = input()
+    if 'T' in s1:
+    	lst1 = list(s1)
+    	lst1.remove("T")
+    	s1 = ''.join(lst1)
+    	s1.lower()
+    	s1 += 'T'
+    	lst1.clear()
+    if sorted(s) == sorted(s1):
+    	r = "YES"
+    	lst.append(r)
+    else:
+    	r = "NO"
+    	lst.append(r)
+for i in range(t):
+	print(lst[i])
