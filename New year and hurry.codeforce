@@ -1,0 +1,12 @@
+p,m = map(int,input().split())
+count = 0
+sum = 0
+i = 1
+while count < p:
+	sum += 5*i
+	if 240 - m >= sum:
+		count += 1
+	else:
+		break 
+	i += 1
+print(count)
