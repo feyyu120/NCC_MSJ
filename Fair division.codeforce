@@ -1,0 +1,13 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    candies = list(map(int, input().split()))
+    c1 = candies.count(1)
+    c2 = candies.count(2)
+    sum = c1 + 2 * c2
+    if sum % 2 != 0:
+        print("NO")
+    elif c1 == 0 and (c2 % 2 != 0):
+        print("NO")
+    else:
+        print("YES")
