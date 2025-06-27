@@ -1,0 +1,12 @@
+n = int(input())
+lst = []
+for i in range(n):
+	s = input()
+	s1 = [int(s[j]) for j in range(len(s))]
+	lst.append(s1)
+	if sum(lst[i][:3]) == sum(lst[i][3:]):
+		print("YES")
+	else:
+		print("NO")
+
+		
