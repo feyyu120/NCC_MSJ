@@ -1,0 +1,7 @@
+n = int(input())
+array = list(map(int,input().split()))
+array1 = array.reverse()
+if array[:] == array[::-1]:
+	print("YES")
+else:
+	print("NO")
