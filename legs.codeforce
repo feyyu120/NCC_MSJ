@@ -1,0 +1,8 @@
+n = int(input())
+for i in range(n):
+    t = int(input())
+    if t%4 == 0:
+        print(t//4)
+    else:
+        print(t//4+1)
+
