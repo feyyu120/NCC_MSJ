@@ -1,0 +1,5 @@
+n = int(input())
+lst = list(map(int, input().split()))
+s = min(lst)
+ind = lst.index(s) + 1 
+print(s,ind)
