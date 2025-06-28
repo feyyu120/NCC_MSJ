@@ -1,0 +1,7 @@
+n = int(input())
+array = list(map(int,input().split()))
+x = int(input())
+if x in array:
+	print(array.index(x))
+else:
+	print(-1)
