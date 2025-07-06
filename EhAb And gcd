@@ -1,0 +1,16 @@
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+def solve():
+    x = int(input())
+    for a in range(1, x):
+        b = x - a
+        if gcd(a,b) + (a * b / gcd(a,b)) == x:
+            print(a,b)
+            return
+
+t = int(input())
+for _ in range(t):
+    solve()
