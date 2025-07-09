@@ -1,0 +1,13 @@
+a = int(input())
+b = int(input())
+c = a + b
+c = [int(x) for x in str(c) if x != '0']
+a = [int(y) for y in str(a) if y != '0' ]
+b= [int(z) for z in str(b) if z != '0']
+a= int(''.join(str(x) for x in a))
+b = int(''.join(str(x) for x in b))
+c = int(''.join(str(x) for x in c))
+if a + b == c:
+	print("YES")
+else:
+	print("NO")
