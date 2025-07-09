@@ -1,0 +1,9 @@
+n = int(input())
+for _ in range(n):
+	P = int(input())
+	for a in range(1,P):
+		b = P - a
+		a += 1
+		if P % a == P % b:
+			print(a,b)
+			break
