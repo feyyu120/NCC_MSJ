@@ -1,0 +1,12 @@
+n = int(input())
+for _ in range(n):
+	s = list(map(int,input().split()))
+	lst = []
+	for i in range(0,len(s)-1,2):
+		m = max(s[i],s[i+1])
+		lst.append(m)
+	s.remove(max(s))
+	if min(lst) >= max(s):
+		print("YES")
+	else:
+		print("NO")
