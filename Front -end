@@ -1,0 +1,12 @@
+t=int(input())
+a=list(map(int,input().split()))
+lst=[]
+I,j=0,t-1
+while len(lst)<t:
+    if len(lst)<t:
+        lst.append(a[I])
+        I+=1
+    if len(lst)<t:
+        lst.append(a[j])
+        j -= 1  
+print(*lst)                      
