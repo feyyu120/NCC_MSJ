@@ -1,0 +1,30 @@
+n = int(input())
+for _ in range(n):
+	t = int(input())
+	a = list(map(int,input().split()))
+	even = []
+	odd = []
+	for i in range(t):
+		if a[i] % 2 == 0:
+			even.append(a[i])
+		else:
+			odd.append(a[i])
+	if len(even) == len(odd):
+		print(0)
+	elif len(a) % 2 != 0:
+		print(-1)
+	else:
+		x = 0
+		count = 0
+		while len(even) != len(odd):
+			if len(even) > len(odd):
+				even[x] += 1
+				odd.append(even[x])
+				even.remove(even[x])
+				count += 1
+			else:
+				odd[x] += 1
+				even.append(odd[x])
+				odd.remove(odd[x])
+				count += 1
+		print(count)
