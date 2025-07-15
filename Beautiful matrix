@@ -1,0 +1,14 @@
+matrix = []
+for i in range(5):
+	lst = list(map(int,input().split()))
+	matrix.append(lst)
+	if 1 in lst:
+		index = lst.index(1)
+		rank = i
+count = 0
+if i == 2 and rank == 2:
+	print(count)
+else:
+	count += (abs(index - 2))
+	count += (abs(rank - 2))
+	print(count)
