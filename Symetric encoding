@@ -1,0 +1,13 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    b = input().strip()
+    r = sorted(set(b))
+    m = len(r)
+    mp = {}
+    for i, ch in enumerate(r):
+        mp[ch] = r[m - 1 - i]
+    ans = ''
+    for ch in b:
+        ans += mp[ch]
+    print(ans)
